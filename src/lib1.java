@@ -204,3 +204,5 @@ class section
 	String[] st = new String[100];// the var in the section
 	int[] pow = new int[100];// the pow of each var in the section
 }
+
+//Lab4
