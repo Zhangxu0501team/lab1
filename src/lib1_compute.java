@@ -1,7 +1,14 @@
 import java.util.HashMap;
 
+import org.junit.Test;
+
 public class lib1_compute
 {
+	@Test
+	public void test()
+	{
+		
+	}
 	public static int contains(section sec, String s)
 	{
 		for (int x = 1; x <= sec.cnt; x++)
@@ -36,6 +43,7 @@ public class lib1_compute
 
 	public static void simplify(String s, section[] sec)
 	{
+		
 		String[] vars = s.split(",");
 		HashMap<String, Double> hm = new HashMap();
 		for (String var : vars)

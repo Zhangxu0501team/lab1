@@ -1,8 +1,21 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+import org.junit.Test;
+
 public class lib1
 {
+
+	@Test
+	public  void test()
+	{
+		String s="x*3+y*4";
+		
+		 section[] a=expression(s);
+		 lib1_compute.d("z", a);
+	}
+
+
 	public static String change(String ss)
 	{
 		StringBuffer temps = new StringBuffer("");
@@ -16,7 +29,6 @@ public class lib1
 		String s = temps.toString();
 		return s;
 	}
-
 	public static boolean judge(String ss)
 	{
 		int len = ss.length();
@@ -163,11 +175,14 @@ public class lib1
 
 	public static void main(String[] args) throws Exception
 	{
-		String expression = "aa*bb*  ccc4+35*aa  *aa *bb   *bb";
+		BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
+		
+		String expression = bufr.readLine();
+		
 		String ex=change(expression);
 		judge(ex);
 		section[] a = expression(ex);
-		BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
+		
 		String command = bufr.readLine();
 		
 		System.out.println("输入公式:" + expression);
@@ -203,4 +218,5 @@ class section
 	int cnt;// the number of the var in the section
 	String[] st = new String[100];// the var in the section
 	int[] pow = new int[100];// the pow of each var in the section
+	
 }
